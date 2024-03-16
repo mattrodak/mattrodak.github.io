@@ -1,5 +1,6 @@
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { nanoid } from 'nanoid'
 
 import { Button } from '@/components/Button/Button'
 import { Field } from '@/components/Field/Field'
@@ -22,7 +23,10 @@ export function CreateColumnForm({ onClose, onSubmit }: CreateColumnFormProps) {
   })
 
   const handleSubmit = formMethods.handleSubmit(values => {
-    onSubmit(values)
+    onSubmit({
+      ...values,
+      id: nanoid(8),
+    })
 
     onClose?.()
   })

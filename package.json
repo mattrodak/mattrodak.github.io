@@ -21,6 +21,7 @@
     "@react-hookz/web": "^24.0.4",
     "@reduxjs/toolkit": "^2.0.1",
     "lodash-es": "^4.17.21",
+    "nanoid": "^5.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
