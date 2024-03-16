@@ -245,6 +245,10 @@ export const todosSlice = createSlice({
           return -1
         }
 
+        if (all === 0) {
+          return 0
+        }
+
         return all === selected ? 1 : 0
       },
     ),
