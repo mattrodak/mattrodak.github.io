@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .ReactModal__Body--open {
+    @apply overflow-hidden;
+  }
+
+  .ReactModal__Overlay {
+    @apply opacity-0 transition-opacity duration-[300] ease-[ease-in-out];
+  }
+
+  .ReactModal__Overlay--after-open {
+    @apply opacity-100;
+  }
+
+  .ReactModal__Overlay--before-close {
+    @apply opacity-0 pointer-events-none;
+  }
+}

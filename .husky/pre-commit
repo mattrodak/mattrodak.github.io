@@ -1,0 +1,11 @@
+#!/bin/sh
+
+. "$(dirname "$0")/_/husky.sh"
+
+# run type-check if there are any changes in ts/tsx files
+if [ -n "$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx)$')" ]; then
+  npm run type-check
+fi
+
+# run lint-staged
+npx lint-staged
